@@ -75,18 +75,39 @@ a:visited {
 
 .weather {
     background-color: var(--clr-background-2);
-    width: 70%;
-    height: 80px;
+    width: 90%;
+    height: 90px;
     border-radius: var(--radius-2);
-    font-size: 1.2rem;
+}
+
+.weather h2 {
+    height: 15px;
+    text-decoration: underline;
 }
 
 .weather-design {
     display: flex;
 }
 
-.music-container {
+.weather-design {
+    margin-top: 5px;
+    font-size: 0.7rem;
+}
 
+.text {
+    font-weight: bold;
+}
+
+.weather-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    width: 100%;
+}
+
+.weather img {
+    
 }
 
 .fa-play {
@@ -98,7 +119,7 @@ a:visited {
 
 .note {
     resize: none;
-    width: 92%;
+    width: 90%;
     height: 260px;
     border: none;
     outline: none;
