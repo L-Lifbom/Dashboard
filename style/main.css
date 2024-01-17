@@ -81,6 +81,10 @@ a:visited {
     font-size: 1.2rem;
 }
 
+.weather-design {
+    display: flex;
+}
+
 .music-container {
 
 }
