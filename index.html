@@ -1,13 +1,64 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/style/styles.css">
+    <script src="https://kit.fontawesome.com/8f932c8a25.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav>
+        <section class="clock"></section>
+    </nav>
+
+    <header>
+        <input type="text" class="title" value="Dashboard">
+    </header>
+
+    <main>
+        <section class="dashboard">
+
+            <div class="link-container container">
+                <h1>quicklinks</h1>
+                <div class="link-list"></div>
+                <button class="addlink-btn"><i class="fa-solid fa-circle-plus"></i>Add link</button>
+            </div>
+
+            <div class="weather-container container">
+                <h1>weather</h1>
+                <div class="weather-list">
+                    <div class="weather">
+                        today
+                    </div>
+                    <div class="weather">
+                        tomorrow
+                    </div>
+                    <div class="weather">
+                        Friday
+                    </div>
+                </div>
+            </div>
+
+            <div class="music-container container">
+                <h1>music player</h1>
+                <i class="fa-solid fa-play"></i>
+            </div>
+
+            <div class="note-container container">
+                <h1>notes</h1>
+                <textarea class="note"></textarea>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <button class="background-btn"><i class="fa-solid fa-rotate-right"></i>background</button>
+    </footer>
+
+    <script type="module" src="/script/main.js"></script>
+</body>
 </html>

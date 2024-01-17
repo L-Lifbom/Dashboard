@@ -1,0 +1,110 @@
+.dashboard {
+    grid-area: dashboard;
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+.container {
+    background-color: var(--clr-background);
+    width: 250px;
+    height: 350px;
+    border-radius: var(--radius-2);
+    color: var(--text-light);
+}
+
+.container h1 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.link-list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 70%;
+    row-gap: 15px;
+    overflow: scroll;
+}
+
+.link {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: var(--clr-background-2);
+    width: 220px;
+    height: 50px;
+    border-radius: var(--radius-2);
+    color: var(--text-light);
+}
+
+.link img {
+    width: 2rem;
+}
+
+.link a {
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--text-light);
+}
+
+.fa-circle-minus {
+
+}
+
+.addlink-btn {
+    margin: auto;
+    height: 30px;
+    width: 90px;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.weather-list {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.weather {
+    background-color: var(--clr-background-2);
+    width: 70%;
+    height: 80px;
+    border-radius: var(--radius-2);
+    font-size: 1.2rem;
+}
+
+.music-container {
+
+}
+
+.fa-play {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    font-size: 2rem;
+}
+
+.note {
+    resize: none;
+    width: 92%;
+    height: 260px;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    display: block;
+    margin: auto;
+    padding: 5px;
+    background-color: var(--clr-background-2);
+    color: var(--text-light);
+    border-radius: var(--radius-2);
+}
+

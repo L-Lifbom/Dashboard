@@ -1,0 +1,26 @@
+nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.clock {
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    padding-top: 2px;
+    width: 250px;
+    height: 25px;
+    background-color: var(--clr-background-3);
+    border-radius: var(--radius);
+    color: var(--text-light);
+}
+
+/* .time {
+    position: absolute;
+}
+
+.date {
+    position: absolute;
+} */
