@@ -13,12 +13,15 @@ function newLink () {
 
     let linkUrl = prompt("Please type the website address as 'example.com' without 'www' or 'https://'.")
 
-    if (linkUrl == null || linkUrl.trim === ""()) {
+    if (linkUrl == null || linkUrl.trim === "") {
         alert("Quicklink creation was canceled or was not entered correctly.")
         return
     }
 
-    allLinks.push({title: linkTitle, url: linkUrl});
+    allLinks.push({
+        title: linkTitle, 
+        url: linkUrl
+    });
 
     let linkHTML = ""
     allLinks.forEach((link) => {
@@ -35,4 +38,13 @@ function newLink () {
     console.log(allLinks);
 }
 
+function removeLink(event) {
+    if (event.target.classList.contains('fa-circle-minus')) {
+/*         allLinks.splice(event, 1);  */
+    }
+}
+
+
+
 addLink.addEventListener("click", newLink)
+linkList.addEventListener("click", removeLink);
