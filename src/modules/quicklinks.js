@@ -48,3 +48,5 @@ function removeLink(event) {
 
 addLink.addEventListener("click", newLink)
 linkList.addEventListener("click", removeLink);
+
+/* const faviconURL = `https://www.google.com/s2/favicons?sz=32&domain_url=${formattedUrl}`; */

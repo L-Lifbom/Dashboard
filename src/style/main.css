@@ -92,8 +92,9 @@ a:visited {
 }
 
 .weather-design {
+    display: flex;
     margin-top: 5px;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
 }
 
 .text {
@@ -106,14 +107,6 @@ a:visited {
     align-items: center;
     column-gap: 10px;
     width: 100%;
-}
-
-.minmax-temp {
-
-}
-
-.weather img {
-    
 }
 
 .fa-play {
