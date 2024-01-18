@@ -1,7 +1,7 @@
-@import url(/style/nav.css);
-@import url(/style/header.css);
-@import url(/style/main.css);
-@import url(/style/footer.css);
+@import url(/src/style/nav.css);
+@import url(/src/style/header.css);
+@import url(/src/style/main.css);
+@import url(/src/style/footer.css);
 
 :root {
     --clr-background: #1c1c1eae;
@@ -29,7 +29,7 @@
 
 body {
     font-family:var(--ff-primary);
-    background-image: url(/assets/demo-img2.avif);
+    background-image: url(/src/assets/demo-img2.avif);
     background-repeat: no-repeat;
     background-size: cover;
     display: grid;
