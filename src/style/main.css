@@ -38,6 +38,7 @@
     height: 50px;
     border-radius: var(--radius-2);
     color: var(--text-light);
+    overflow-x: hidden;
 }
 
 .link a {
@@ -46,12 +47,18 @@
     color: inherit;
 }
 
-a:visited {
-    color: var(--text-light);
+.link img {
+    min-width: 18%;
+    max-width: 18%;
+    margin-right: 5px;
 }
 
 .fa-circle-minus {
 
+}
+
+a:visited {
+    color: var(--text-light);
 }
 
 .addlink-btn, .dogs-btn {
