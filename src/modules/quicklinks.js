@@ -1,20 +1,20 @@
 let allLinks = [];
 
-const addLink = document.querySelector('.addlink-btn')
+const addLink = document.querySelector('.addlink-btn');
 let linkList = document.querySelector('.link-list');
 
 function newLink () {
-    let linkTitle = prompt("Please enter a title for the quicklink.")
+    let linkTitle = prompt("Enter title forn new quicklink.");
 
-    if (linkTitle == null || linkTitle.trim() === "") {
-        alert("Quicklink creation was canceled or was not entered correctly.")
-        return
+    if (!linkTitle) {
+        alert("Quicklink creation canceled or not entered correctly.");
+        return;
     }
 
-    let linkUrl = prompt("Please type the website address as 'example.com' without 'www' or 'https://'.")
+    let linkUrl = prompt("Type your website url using only 'example.com'")
 
-    if (linkUrl == null || linkUrl.trim === "") {
-        alert("Quicklink creation was canceled or was not entered correctly.")
+    if (!linkUrl) {
+        alert("Quicklink creation canceled or not entered correctly.")
         return
     }
 
@@ -23,10 +23,9 @@ function newLink () {
         url: linkUrl
     });
 
-    const faviconUrl = `https://www.google.com/s2/favicons?sz=32&domain_url=${linkUrl}`;
-
     let linkHTML = ""
     allLinks.forEach((link) => {
+        let faviconUrl = `https://www.google.com/s2/favicons?sz=32&domain_url=${link.url}`;
         linkHTML += 
         `<div class="link">
         <img src="${faviconUrl}" alt="">
@@ -42,7 +41,7 @@ function newLink () {
 
 function removeLink(event) {
     if (event.target.classList.contains('fa-circle-minus')) {
-/*         allLinks.splice(event, 1);  */
+
     }
 }
 

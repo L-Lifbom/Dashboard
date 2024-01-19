@@ -1,4 +1,4 @@
-let clock = document.querySelector('.clock')
+let clock = document.querySelector('.clock');
 
 export function displayClock() {
     let saveDate = new Date();
@@ -12,8 +12,8 @@ export function displayClock() {
 
     let clockHTML = 
     `<p class="time">${formattedTime}</p>
-    <p class="date">${formattedDate}</p>`
-    clock.innerHTML = clockHTML
+    <p class="date">${formattedDate}</p>`;
+    clock.innerHTML = clockHTML;
 }
 
 displayClock()

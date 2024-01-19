@@ -17,6 +17,7 @@ header {
     font-family: inherit;
     font-weight: bold;
     height: 100px;
+    width: 100%;
 }
 
 .header-title::placeholder {
