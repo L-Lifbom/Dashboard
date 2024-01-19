@@ -25,36 +25,41 @@
     align-items: center;
     flex-direction: column;
     height: 70%;
-    row-gap: 15px;
-    overflow: scroll;
+    row-gap: 13px;
+    overflow-y: scroll;
 }
 
 .link {
     display: flex;
-    justify-content: space-between;
     padding: 5px;
     background-color: var(--clr-background-2);
     width: 220px;
     height: 50px;
     border-radius: var(--radius-2);
     color: var(--text-light);
-    overflow-x: hidden;
+    position: relative;
 }
 
 .link a {
     font-size: 2rem;
     text-decoration: none;
     color: inherit;
+    overflow-x: hidden;
+    max-width: 65%;
 }
 
 .link img {
     min-width: 18%;
     max-width: 18%;
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
 .fa-circle-minus {
-
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 5px;
+    margin-top: 5px;
 }
 
 a:visited {
@@ -65,8 +70,9 @@ a:visited {
     margin: auto;
     height: 30px;
     width: 90px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font-size: 0.9rem;
+    margin-top: 5px;
 }
 
 .weather-list {

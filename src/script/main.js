@@ -1,8 +1,8 @@
+import {} from "../modules/background.js";
 import {} from "../modules/clock.js";
+import {} from "../modules/dogs.js";
 import {} from "../modules/quicklinks.js";
 import {} from "../modules/weather.js";
-import {} from "../modules/background.js";
-import {} from "../modules/dogs.js";
 
 let headerTitle = document.querySelector('.header-title');
 

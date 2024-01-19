@@ -7,7 +7,7 @@
     --clr-background: #1c1c1eae;
     --clr-background-2: #0f0f10;
     --clr-background-3: #1c1c1e;
-    --clr-background-4: #454547;
+    --clr-background-4: #97979b;
     --text-light: #FFFFF0;
     --text-light-2: #FFFFFF;
     --text-dark: #1c1c1e;
@@ -24,13 +24,30 @@
     text-transform: capitalize;
 }
 
+::selection {
+    background-color: var(--text-light);
+    color: var(--text-dark);
+}
+
+::-moz-selection {
+    background-color: var(--text-light);
+    color: var(--text-dark);
+}
+
 ::-webkit-scrollbar {
-    display: none;
+    background-color: var(--clr-background-2);
+    width: 5px;
+    border-radius: var(--radius-2);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--clr-background-4);
+    border-radius: var(--radius-2);
 }
 
 body {
     background-image: url(/src/assets/placerholder.avif);
-    font-family:var(--ff-primary);
+    font-family: var(--ff-primary);
     background-repeat: no-repeat;
     background-size: cover;
     display: grid;
