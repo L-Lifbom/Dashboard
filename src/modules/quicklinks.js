@@ -22,19 +22,15 @@ function newLink () {
         title: linkTitle, 
         url: linkUrl
     });
-
+    console.log(allLinks);
+    
     const faviconUrl = `https://www.google.com/s2/favicons?sz=32&domain_url=${linkUrl}`;
 
-    let linkHTML = ""
-    allLinks.forEach((link) => {
-        linkHTML += 
-        `<div class="link">
+    let linkHTML = `<div class="link">
         <img src="${faviconUrl}" alt="">
-        <a href="http://www.${link.url}" target="_blank">${link.title}</a>
+        <a href="http://www.${url}" target="_blank">${title}</a>
         <i class="fa-solid fa-circle-minus"></i>
         </div>`
-    })
-
 
     linkList.innerHTML = linkHTML
     console.log(allLinks);

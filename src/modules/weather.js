@@ -1,6 +1,7 @@
 import axios from "axios";
 
-let city = "stockholm"
+let locationInput = document.querySelector('.location-input')
+let city = "";
 let weather = [
     document.querySelector('.weather-today'),
     document.querySelector('.weather-tomorrow'),
@@ -59,5 +60,9 @@ function updateWeather(weatherData) {
         day.innerHTML = weatherHtml;
     }
 }
+
+locationInput.addEventListener('input', () => {
+    city = locationInput.value
+});
 
 fetchWeather();

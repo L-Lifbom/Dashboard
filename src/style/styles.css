@@ -7,6 +7,7 @@
     --clr-background: #1c1c1eae;
     --clr-background-2: #0f0f10;
     --clr-background-3: #1c1c1e;
+    --clr-background-4: #454547;
     --text-light: #FFFFF0;
     --text-light-2: #FFFFFF;
     --text-dark: #1c1c1e;
@@ -28,6 +29,7 @@
 }
 
 body {
+    background-color: var(--clr-background-4);
     font-family:var(--ff-primary);
     background-repeat: no-repeat;
     background-size: cover;

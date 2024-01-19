@@ -1,3 +1,3 @@
-Download Axios "npm install axios"
+Start "npm install"
 
 Time API: http://worldtimeapi.org/

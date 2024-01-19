@@ -2,6 +2,7 @@ import axios from "axios";
 
 const backgroundBtn = document.querySelector('.background-btn')
 let body = document.querySelector('body')
+let categoryInput = document.querySelector('.category-input')
 let category = "";
 
 async function fetchBackground() {
@@ -18,12 +19,19 @@ async function fetchBackground() {
 
 async function updateBackground() {
   const backgroundData = await fetchBackground();
-  const imgUrl = backgroundData.urls.full;
-  body.style.backgroundImage = `url(${imgUrl})`
+  if (backgroundData && backgroundData.urls && backgroundData.urls.full) {
+    const imgUrl = backgroundData.urls.full;
+    body.style.backgroundImage = `url(${imgUrl})`;
+  }
 }
 
 backgroundBtn.addEventListener('click' , updateBackground);
 
+categoryInput.addEventListener('blur', () => {
+  category = categoryInput.value
+});
+
 /* window.addEventListener("DOMContentLoaded", () => {
-  updateBackground()
+  categoryInput.value = "";
+  updateBackground();
 }); */
