@@ -6,11 +6,13 @@ let weather = [
     document.querySelector('.weather-today'),
     document.querySelector('.weather-tomorrow'),
     document.querySelector('.weather-extra-day')
-]
-
-/* let minmax = document.querySelector('.minmax') */
+];
 
 async function fetchWeather() {
+    if (city.trim() === "") {
+        city = "stockholm";
+    }
+
     const apiKey = import.meta.env.VITE_WEATHER_KEY;
     let url = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=7&lang=en`;
 
@@ -28,25 +30,20 @@ async function fetchWeather() {
 function updateWeather(weatherData) {
     for (let i = 0; i < 3; i++) {
         let temp, current;
-        const day = weather[i]
+        const day = weather[i];
 
         if (i === 0) {
             temp = weatherData.current.temp_c;
-            current = "now: "
+            current = "now: ";
         } else {
             temp = weatherData.forecast.forecastday[i].day.avgtemp_c;
-            current = "avg: "
+            current = "avg: ";
         }
         
         const icon = weatherData.forecast.forecastday[i].day.condition.icon;
         const text = weatherData.forecast.forecastday[i].day.condition.text;
         const min = weatherData.forecast.forecastday[i].day.mintemp_c;
         const max = weatherData.forecast.forecastday[i].day.maxtemp_c;
-
-/*         let minmaxHtml = 
-        `<p>min: ${min}°C</p>
-        <p>max: ${max}°C</p>`;
-        minmax.innerHTML = minmaxHtml */
 
         let weatherHtml = 
         `<img src="${icon}" alt="Todays weather">
@@ -55,14 +52,18 @@ function updateWeather(weatherData) {
                 <p class="text">${text}</p>
                 <p>${current} ${temp}°C</p>
             </div>
-            <i class="fa-solid fa-circle-info"></i>
+            <i class="fa-solid fa-circle-info" title="Min: ${min}°C\nMax: ${max}°C"></i>
         </div>`;
         day.innerHTML = weatherHtml;
     }
 }
 
-locationInput.addEventListener('input', () => {
-    city = locationInput.value
-});
+function handleInput() {
+    city = locationInput.value;
+    fetchWeather();
+}
+
+locationInput.addEventListener('input', handleInput);
+locationInput.addEventListener('blur', handleInput);
 
 fetchWeather();

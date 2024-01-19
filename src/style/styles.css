@@ -29,7 +29,7 @@
 }
 
 body {
-    background-color: var(--clr-background-4);
+    background-image: url(/src/assets/placerholder.avif);
     font-family:var(--ff-primary);
     background-repeat: no-repeat;
     background-size: cover;

@@ -1,3 +1,5 @@
 Start "npm install"
 
-Time API: http://worldtimeapi.org/
+This repo is fetching from Api's using Axios.
+
+Unsplash, WeatherApi,

@@ -5,7 +5,7 @@ header {
     align-items: end;
 }
 
-.title {
+.header-title {
     margin-bottom: 20px;
     text-align: center;
     background-color: transparent;
@@ -19,6 +19,7 @@ header {
     height: 100px;
 }
 
-.title::placeholder {
+.header-title::placeholder {
     opacity: 1;
+    color: var(--text-light-2);
 }
