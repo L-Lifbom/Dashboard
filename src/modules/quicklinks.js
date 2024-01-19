@@ -23,11 +23,13 @@ function newLink () {
         url: linkUrl
     });
 
+    const faviconUrl = `https://www.google.com/s2/favicons?sz=32&domain_url=${linkUrl}`;
+
     let linkHTML = ""
     allLinks.forEach((link) => {
         linkHTML += 
         `<div class="link">
-        <img src="/assets/Google-favicon.png" alt="">
+        <img src="${faviconUrl}" alt="">
         <a href="http://www.${link.url}" target="_blank">${link.title}</a>
         <i class="fa-solid fa-circle-minus"></i>
         </div>`
@@ -49,4 +51,3 @@ function removeLink(event) {
 addLink.addEventListener("click", newLink)
 linkList.addEventListener("click", removeLink);
 
-/* const faviconURL = `https://www.google.com/s2/favicons?sz=32&domain_url=${formattedUrl}`; */

@@ -7,14 +7,14 @@ let weather = [
     document.querySelector('.weather-extra-day')
 ]
 
-let minmax = document.querySelector('.minmax')
+/* let minmax = document.querySelector('.minmax') */
 
 async function fetchWeather() {
-    const apiKey1 = "0c6b3ff93d2a4572830112130241701"
-    let url1 = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey1}&q=${city}&days=7&lang=en`;
+    const apiKey = import.meta.env.VITE_WEATHER_KEY;
+    let url = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=7&lang=en`;
 
     try {
-        const response = await axios.get(url1);
+        const response = await axios.get(url);
         const weatherData = response.data;
         console.log("Weather successfully fetched.");
         updateWeather(weatherData);

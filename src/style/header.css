@@ -16,4 +16,9 @@ header {
     font-size: 5rem;
     font-family: inherit;
     font-weight: bold;
+    height: 100px;
+}
+
+.title::placeholder {
+    opacity: 1;
 }
