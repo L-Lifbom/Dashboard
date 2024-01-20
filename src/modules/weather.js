@@ -9,9 +9,7 @@ let weather = [
 ];
 
 async function fetchWeather() {
-    if (city.trim() === "") {
-        city = "stockholm";
-    }
+    city = fetchLocation()
 
     const apiKey = import.meta.env.VITE_WEATHER_KEY;
     let url = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=7&lang=en`;
@@ -29,6 +27,25 @@ async function fetchWeather() {
         for (let i = 0; i < 3; i++) {
             weather[i].innerHTML = weatherHtml;
         }        
+    }
+}
+
+async function fetchLocation() {
+
+    if (locationInput.value.trim() !== "") {
+        return locationInput.value.trim();
+    }
+
+    const apiKey2 = import.meta.env.VITE_LOCATION_KEY;
+    let url2 = ``;
+
+    try {
+        const response = await axios.get(url2);
+        const locationData = response.data
+        return locationData.city
+
+    } catch (error2) {
+        console.log("Location was not fetched: " + error2);
     }
 }
 
