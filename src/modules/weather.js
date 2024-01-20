@@ -24,6 +24,11 @@ async function fetchWeather() {
 
     } catch (error) {
         console.log("Weather was not fetched: " + error);
+        let weatherHtml = 
+        `<h4>Attempt to fetch weather was unsuccessful <i class="fa-regular fa-face-frown"></i></h4>`
+        for (let i = 0; i < 3; i++) {
+            weather[i].innerHTML = weatherHtml;
+        }        
     }
 }
 

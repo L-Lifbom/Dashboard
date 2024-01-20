@@ -87,6 +87,12 @@ input {
     color: var(--text-light);
     height: 25px;
     outline: none;
+    text-transform: none;
+}
+
+input::placeholder {
+    color: white;
+    opacity: 1;
 }
 
 @media (max-width: 450px) {

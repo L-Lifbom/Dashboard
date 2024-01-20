@@ -13,6 +13,9 @@ async function fetchDogs() {
         return response.data
     } catch (error) {
         console.log("Dog was not fetched: " + error);
+        let dogHtml = 
+        `<h4>Attempt to fetch dogs was unsuccessful <i class="fa-regular fa-face-frown"</h4>`
+        dogs.innerHTML = dogHtml
     }
 }
 
@@ -28,6 +31,6 @@ async function updateDogs() {
 
 dogsBtn.addEventListener('click' , updateDogs);
 
-/* window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("DOMContentLoaded", () => {
     updateDogs();
-  }); */
+  });

@@ -49,9 +49,9 @@
 }
 
 .link img {
-    min-width: 18%;
-    max-width: 18%;
-    margin-right: 10px;
+    max-width: 30px;
+    height: 30px;
+    margin: auto 10px auto 5px ;
 }
 
 .fa-circle-minus {
@@ -119,6 +119,10 @@ a:visited {
     margin-top: 10px;
 }
 
+.weather h4 {
+    margin-top: 20px;
+}
+
 .fa-circle-info {
     position: absolute;
     margin-left: 135px;
@@ -135,6 +139,8 @@ a:visited {
     display: flex;
     justify-content: center;
     height: 70%;
+    text-align: center;
+    align-items: center;
 }
 
 .dogs img {

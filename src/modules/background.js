@@ -1,8 +1,8 @@
 import axios from "axios";
 
-const backgroundBtn = document.querySelector('.background-btn')
-let body = document.querySelector('body')
-let categoryInput = document.querySelector('.category-input')
+const backgroundBtn = document.querySelector('.background-btn');
+let body = document.querySelector('body');
+let categoryInput = document.querySelector('.category-input');
 let category = "";
 
 async function fetchBackground() {
@@ -14,6 +14,9 @@ async function fetchBackground() {
     return response.data;
   } catch (error) {
     console.log("Background was not fetched: " + error);
+    categoryInput.style.backgroundColor = '#cc0000';
+    categoryInput.value = "";
+    categoryInput.placeholder = "Error";
   }
 }
 
@@ -27,8 +30,10 @@ async function updateBackground() {
 
 backgroundBtn.addEventListener('click' , updateBackground);
 
-categoryInput.addEventListener('blur', () => {
+categoryInput.addEventListener('input', () => {
   category = categoryInput.value
+  categoryInput.style.backgroundColor = 'var(--clr-background-3)';
+  categoryInput.placeholder = "Choose Category";
 });
 
 /* window.addEventListener("DOMContentLoaded", () => {
