@@ -46,7 +46,7 @@
 }
 
 body {
-    background-image: url(/src/assets/placerholder.avif);
+    background-color: black;
     font-family: var(--ff-primary);
     background-repeat: no-repeat;
     background-size: cover;
@@ -93,6 +93,27 @@ input {
 input::placeholder {
     color: white;
     opacity: 1;
+}
+
+.info-button {
+    position: fixed;
+    top: 20px;
+    left: 10px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+
+.fa-spinner {
+    animation: spin 2s linear infinite;
+    display: block;
+    margin: 20px auto 0 auto;
+    font-size: 2rem;
+    cursor: default;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 @media (max-width: 450px) {

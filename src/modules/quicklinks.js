@@ -11,7 +11,7 @@ function displayLinks() {
         `<div class="link" data-index="${index}">
         <img src="${faviconUrl}" alt="">
         <a href="http://www.${link.url}" target="_blank">${link.title}</a>
-        <i class="fa-solid fa-circle-minus"></i>
+        <i class="fa-solid fa-circle-minus" title="Remove"></i>
         </div>`;
     });
 

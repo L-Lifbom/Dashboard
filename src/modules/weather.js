@@ -1,7 +1,8 @@
 import axios from "axios";
 
 let locationInput = document.querySelector('.location-input')
-let city = "";
+let city = null;
+let latitude, longitude;
 let weather = [
     document.querySelector('.weather-today'),
     document.querySelector('.weather-tomorrow'),
@@ -9,10 +10,10 @@ let weather = [
 ];
 
 async function fetchWeather() {
-    city = fetchLocation()
 
     const apiKey = import.meta.env.VITE_WEATHER_KEY;
-    let url = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=7&lang=en`;
+    let location = city ? city : `${latitude},${longitude}`;
+    let url = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${location}&days=7&lang=en`;
 
     try {
         const response = await axios.get(url);
@@ -21,31 +22,33 @@ async function fetchWeather() {
         updateWeather(weatherData);
 
     } catch (error) {
-        console.log("Weather was not fetched: " + error);
+        console.error("Weather was not fetched: " + error);
         let weatherHtml = 
         `<h4>Attempt to fetch weather was unsuccessful <i class="fa-regular fa-face-frown"></i></h4>`
         for (let i = 0; i < 3; i++) {
             weather[i].innerHTML = weatherHtml;
-        }        
+        }
     }
 }
 
-async function fetchLocation() {
-
-    if (locationInput.value.trim() !== "") {
-        return locationInput.value.trim();
+function fetchLocation() {
+    let weatherHtml = 
+    `<i class="fa-solid fa-spinner"></i>`
+    for (let i = 0; i < 3; i++) {
+        weather[i].innerHTML = weatherHtml;
     }
-
-    const apiKey2 = import.meta.env.VITE_LOCATION_KEY;
-    let url2 = ``;
-
-    try {
-        const response = await axios.get(url2);
-        const locationData = response.data
-        return locationData.city
-
-    } catch (error2) {
-        console.log("Location was not fetched: " + error2);
+    if ('geolocation' in navigator) {
+        navigator.geolocation.getCurrentPosition(async position => {
+            latitude = position.coords.latitude;
+            longitude = position.coords.longitude;
+            if (!city) {
+                await fetchWeather();
+            }
+        }, error => {
+            console.error('Geolocation error:', error);
+        });
+    } else {
+        console.log('Geolocation is not supported by this browser.');
     }
 }
 
@@ -74,18 +77,18 @@ function updateWeather(weatherData) {
                 <p class="text">${text}</p>
                 <p>${current} ${temp}°C</p>
             </div>
-            <i class="fa-solid fa-circle-info" title="Min: ${min}°C\nMax: ${max}°C"></i>
+            <i class="fa-solid fa-circle-info weather-info" title="Min: ${min}°C\nMax: ${max}°C"></i>
         </div>`;
         day.innerHTML = weatherHtml;
     }
 }
 
 function handleInput() {
-    city = locationInput.value;
+    city = locationInput.value.trim();
     fetchWeather();
 }
 
 locationInput.addEventListener('input', handleInput);
 locationInput.addEventListener('blur', handleInput);
 
-fetchWeather();
+fetchLocation();

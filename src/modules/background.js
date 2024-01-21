@@ -13,7 +13,7 @@ async function fetchBackground() {
     console.log("Background successfully fetched.");
     return response.data;
   } catch (error) {
-    console.log("Background was not fetched: " + error);
+    console.error("Background was not fetched: " + error);
     categoryInput.style.backgroundColor = '#cc0000';
     categoryInput.value = "";
     categoryInput.placeholder = "Error";

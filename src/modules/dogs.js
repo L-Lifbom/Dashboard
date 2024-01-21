@@ -12,7 +12,7 @@ async function fetchDogs() {
         console.log("Dog successfully fetched.");
         return response.data
     } catch (error) {
-        console.log("Dog was not fetched: " + error);
+        console.error("Dog was not fetched: " + error);
         let dogHtml = 
         `<h4>Attempt to fetch dogs was unsuccessful <i class="fa-regular fa-face-frown"</h4>`
         dogs.innerHTML = dogHtml
@@ -20,13 +20,16 @@ async function fetchDogs() {
 }
 
 async function updateDogs() {
+    let dogHtml = `<i class="fa-solid fa-spinner"></i>`
+    dogs.innerHTML = dogHtml;
+
     const dogData = await fetchDogs();
     const dogImg = dogData.message;
     
-    let dogHtml = 
+    dogHtml = 
     `<img src="${dogImg}" alt="Image of dogs">`;
 
-    dogs.innerHTML = dogHtml
+    dogs.innerHTML = dogHtml;
 }
 
 dogsBtn.addEventListener('click' , updateDogs);
