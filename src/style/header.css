@@ -19,8 +19,3 @@ header {
     height: 100px;
     width: 60%;
 }
-
-.header-title::placeholder {
-    opacity: 1;
-    color: var(--text-light-2);
-}

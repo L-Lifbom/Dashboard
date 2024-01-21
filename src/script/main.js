@@ -4,6 +4,18 @@ import {} from "../modules/dogs.js";
 import {} from "../modules/quicklinks.js";
 import {} from "../modules/weather.js";
 
+const helpWindow = document.querySelector('.help-window');
+const openHelp = document.querySelector('.help-btn')
+const closeHelp = document.querySelector('.help-close')
+
+openHelp.addEventListener('click', () => {
+    helpWindow.showModal();
+})
+
+closeHelp.addEventListener('click', () => {
+    helpWindow.close();
+})
+
 let headerTitle = document.querySelector('.header-title');
 
 const savedTitle = localStorage.getItem('headerTitle');

@@ -10,9 +10,23 @@
 </head>
 
 <body>
-    <i class="fa-solid fa-circle-info info-button" title="Help"></i>
+    <dialog class="help-window">
+        <i class="fa-solid fa-xmark help-close" title="Close"></i>
+        <h2>help</h2>
+        <ul>
+            <li>Clock: <p>This feature displays the current time and date.</p></li>
+            <li>Title: <p>This customizable title allows for personalization of your dashboard.</p></li>
+            <li>Quicklinks: <p>This widget enables the creation and storage of quicklinks.</p></li>
+            <li>Weather: <p>This widget presents the current weather conditions of your location. It also offers the flexibility to change the city via an input location box.</p></li>
+            <li>Dogs: <p>This widget offers a delightful display of randomly selected cute dogs.</p></li>
+            <li>Notes: <p>This widget provides a practical solution for recording notes,</p></li>
+            <li>Background: <p>Change the dashboard background with a button, with options across different categories.</p></li>
+        </ul>
+    </dialog>
+      
 
     <nav>
+        <i class="fa-solid fa-circle-question help-btn" title="Help"></i>
         <section class="clock"></section>
     </nav>
 
@@ -48,14 +62,12 @@
                         <div class="weather-extra-day weather-design"></div>
                     </div>
                 </div>
-                <input class="location-input" type="text" placeholder="Choose Location">
+                <input class="location-input" type="text" placeholder="Input Location">
             </section>
 
             <section class="dogs-container container">
                 <h1>dogs</h1>
                 <div class="dogs-list">
-                    <i class="fa-solid fa-toggle-on"></i>
-                    <h2>dog ceo API</h2>
                     <div class="dogs"></div>
                 </div>
                 <button class="dogs-btn"><i class="fa-solid fa-rotate-right"></i>dog</button>
@@ -75,7 +87,7 @@
 
     <footer>
         <button class="background-btn"><i class="fa-solid fa-rotate-right"></i>background</button>
-        <input class="category-input" type="text" placeholder="Choose Category">
+        <input class="category-input" type="text" placeholder="Input Category">
     </footer>
 
     <script type="module" src="/src/script/main.js"></script>

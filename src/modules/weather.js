@@ -1,6 +1,6 @@
 import axios from "axios";
 
-let locationInput = document.querySelector('.location-input')
+let locationInput = document.querySelector('.location-input');
 let city = null;
 let latitude, longitude;
 let weather = [

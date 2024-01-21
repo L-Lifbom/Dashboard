@@ -5,6 +5,15 @@ nav {
     margin-top: 20px;
 }
 
+.help-btn {
+    position: fixed;
+    font-size: 1.3rem;
+    top: 20px;
+    left: 10px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+
 .clock {
     display: flex;
     justify-content: center;

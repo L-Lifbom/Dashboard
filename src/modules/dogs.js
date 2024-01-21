@@ -1,12 +1,11 @@
 import axios from "axios";
 
 const dogsBtn = document.querySelector('.dogs-btn');
-let dogs = document.querySelector('.dogs')
+let dogs = document.querySelector('.dogs');
 
 async function fetchDogs() {
-/*     const apiKey = import.meta.env.VITE_DOG_KEY; */
-/*     const url = `https://api.thedogapi.com/v1/images/search?limit=10&api_key=${apiKey}`; */
     const url = 'https://dog.ceo/api/breeds/image/random';
+
     try {
         const response = await axios.get(url);
         console.log("Dog successfully fetched.");
@@ -20,14 +19,14 @@ async function fetchDogs() {
 }
 
 async function updateDogs() {
-    let dogHtml = `<i class="fa-solid fa-spinner"></i>`
+    let dogHtml = `<i class="fa-solid fa-spinner"></i>`;
     dogs.innerHTML = dogHtml;
 
     const dogData = await fetchDogs();
     const dogImg = dogData.message;
     
     dogHtml = 
-    `<img src="${dogImg}" alt="Image of dogs">`;
+    `<img src="${dogImg}">`;
 
     dogs.innerHTML = dogHtml;
 }

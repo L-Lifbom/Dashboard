@@ -46,7 +46,7 @@
 }
 
 body {
-    background-color: black;
+    background-image: url(/src/assets/placerholder.avif);
     font-family: var(--ff-primary);
     background-repeat: no-repeat;
     background-size: cover;
@@ -56,6 +56,53 @@ body {
     "header" 25vh
     "dashboard" 50vh
     "footer" 15vh;
+}
+
+.help-window {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+    height: 620px;
+    outline: none;
+    border-radius: var(--radius-2);
+    border: 2px solid black;
+    background-color: var(--clr-background-2);
+    color: black;
+}
+
+.help-window::backdrop {
+    background-color: #4d4b4b;
+    opacity: 0.8;
+}
+
+.help-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 2rem;
+    color: var(--text-light);
+}
+
+.help-window h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5rem;
+    color: var(--text-light);
+}
+
+.help-window li {
+    font-size: 1.5rem;
+    margin: 10px 10px 0 10px;
+    background-color: var(--text-light);
+    border-radius: var(--radius-2);
+    padding: 5px;
+}
+
+.help-window p {
+    font-size: 1rem;
+    text-transform: none;
 }
 
 button {
@@ -90,17 +137,9 @@ input {
     text-transform: none;
 }
 
-input::placeholder {
+.location-input::placeholder, .category-input::placeholder {
     color: white;
     opacity: 1;
-}
-
-.info-button {
-    position: fixed;
-    top: 20px;
-    left: 10px;
-    color: white;
-    text-shadow: 2px 2px 2px black;
 }
 
 .fa-spinner {
@@ -136,7 +175,7 @@ input::placeholder {
         row-gap: 20px;
     }
 
-    .weather-container {
+    .weather-container, .dogs-container {
         margin-bottom: 20px;
     }
 
