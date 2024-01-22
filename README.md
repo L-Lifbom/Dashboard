@@ -11,10 +11,7 @@ This project contains a Dashboard layout with widgets. It utilizes fetch request
 
 - Clone this project to your preferred directory.
 
-- Start terminal either in:
-    Optional code editor
-    Windows: Powershell
-    MacOS: Terminal.app
+- Start terminal either in: Optional code editor, Windows Powershell, MacOS Terminal.app
 
 - Navigate to the project directory: `cd Dashboard`
 
