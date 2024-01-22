@@ -17,10 +17,10 @@ This project contains a Dashboard layout with widgets. It utilizes fetch request
     MacOS: Terminal.app
 
 - Navigate to the project directory:
-'cd Dashboard'
+`cd Dashboard`
 
 - Install the project's required modules and dependencies, including Axios:
-'npm install'
+`npm install`
 
 - You'll need two API keys to fully utilize this project:
 - Weather API key: Follow this link, create an account and retrieve the your specific API key: https://www.weatherapi.com/
@@ -28,12 +28,12 @@ This project contains a Dashboard layout with widgets. It utilizes fetch request
 
 - Create a file called .env in the project root directory 
 - Paste the following template into it:
-VITE_WEATHER_KEY=YOUR_ACCESS_KEY
-VITE_BACKGROUND_KEY=YOUR_ACCESS_KEY
+`VITE_WEATHER_KEY=YOUR_ACCESS_KEY`
+`VITE_BACKGROUND_KEY=YOUR_ACCESS_KEY`
 - Replace YOUR_WEATHER_API_KEY with your Weather API key and YOUR_BACKGROUND_API_KEY with your Background API key.
 
 - Start the project by running the following command:
-'npm run dev'
+`npm run dev`
 - Copy the local path into a web browser, ex Google Chrome & Firefox
 
 - Enjoy!
