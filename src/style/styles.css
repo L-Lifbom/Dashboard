@@ -165,9 +165,13 @@ input {
         "footer" auto;
     }
 
+    .help-window {
+        height: 770px;
+    }
+
     .header-title {
         font-size: 3.5rem;
-        width: 100%;
+        width: 90%;
     }
 
     .dashboard {
