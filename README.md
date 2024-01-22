@@ -1,7 +1,7 @@
 # Dashboard
 
 ## Description
-This project contains a Dashboard layout with widgets. It utilizes fetch request from multiple API's, displays date/time, access to automatically saving note and features a quicklink save widget. Some highlights include optimizational categorys, location tracking of weather or the ability to choosee between dog breeds. This  in turn creates a dynamic user experience. This project exists as a school assignment.
+This project contains a Dashboard layout with widgets. It utilizes fetch request from multiple API's, displays date/time, gives access to a automatically saving note area and features a quicklink save widget. Some highlights include optimizational categorys, location tracking of weather or the ability to choosee between dog breeds. This  in turn creates a dynamic user experience. This project exists as a school assignment.
 
 ## Visuals
 ![Screenshot of Dashboard](src/assets/Screenshot.png)
