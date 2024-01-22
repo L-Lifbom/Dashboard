@@ -29,10 +29,13 @@ async function fetchDogs(breed = 'All') {
 async function updateDogs(breed = 'All') {
     // Displays loading spinner while image is being fetching
     dogs.innerHTML = `<i class="fa-solid fa-spinner dogs-spinner"></i>`;
+    
     // Initiates fetch of dog image data and waits for response
     const dogData = await fetchDogs(breed);
+
     // Extracts image URL
     const dogImg = dogData.message;
+
     // Displays the dog container with the fetched dog image 
     dogs.innerHTML = `<img src="${dogImg}">`;
 }
