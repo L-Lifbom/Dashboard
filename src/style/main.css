@@ -155,6 +155,10 @@ a:visited {
     overflow: hidden;
 }
 
+.dogs-spinner {
+    padding-top: 50px;
+}
+
 .dogs img {
     width: 100%;
     height: 100%;

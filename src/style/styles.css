@@ -46,7 +46,7 @@
 }
 
 body {
-    background-image: url(/src/assets/placerholder.avif);
+    background-image: url(/src/assets/placeholder.avif);
     font-family: var(--ff-primary);
     background-repeat: no-repeat;
     background-size: cover;
@@ -67,9 +67,9 @@ body {
     height: 620px;
     outline: none;
     border-radius: var(--radius-2);
-    border: 2px solid black;
+    border: none;
     background-color: var(--clr-background-2);
-    color: black;
+    color: var(--text-light);
 }
 
 .help-window::backdrop {
@@ -94,10 +94,11 @@ body {
 
 .help-window li {
     font-size: 1.5rem;
-    margin: 10px 10px 0 10px;
-    background-color: var(--text-light);
+    margin: 10px 20px 0 20px;
+    background-color: var(--clr-background-3);
     border-radius: var(--radius-2);
     padding: 5px;
+    list-style-type: none;
 }
 
 .help-window p {
