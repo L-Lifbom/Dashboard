@@ -56,7 +56,7 @@ categoryInput.addEventListener('input', () => {
 });
 
 // Event listener triggered by page reload that resets the input field value and initiates updateBackground function
-/* window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("DOMContentLoaded", () => {
   categoryInput.value = "";
   updateBackground();
-}); */
+});
