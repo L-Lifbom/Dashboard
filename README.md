@@ -28,7 +28,7 @@ This project contains a Dashboard layout with widgets. It utilizes fetch request
 - Paste the following template into it:
 - `VITE_WEATHER_KEY=YOUR_ACCESS_KEY`
 - `VITE_BACKGROUND_KEY=YOUR_ACCESS_KEY`
-- Replace YOUR_WEATHER_API_KEY with your Weather API key and YOUR_BACKGROUND_API_KEY with your Background API key.
+- Replace YOUR_ACCESS_KEY with it's respective Weather or Background API key.
 
 - Start the project by running the following command: `npm run dev`
 - Copy the local path into a web browser, ex Google Chrome & Firefox
@@ -67,7 +67,6 @@ I also think my error handeling can be improved. By always giving users load sig
 
 ### Conclusion
 In the future I will try to utilize my skills in structuring and organizing the files. I will also learn from this project and attempt to write flexible and dynamic code that is easily modifiable with good readability.
-
 
 ## Contact Information
 - Github: https://github.com/L-Lifbom
